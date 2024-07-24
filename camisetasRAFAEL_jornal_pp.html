@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Camisetas de Jornal e PP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 50px;
+            transition: background 1s;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff; /* Branco para destaque */
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #dcdcdc; /* Cinza claro para contraste */
+        }
+        .button-container {
+            margin-top: 20px;
+            display: none;
+        }
+        .mystery-button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #ff4500; /* Laranja avermelhado para chamar atenção */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .mystery-button:hover {
+            background-color: #ff6347; /* Tom mais claro ao passar o mouse */
+            transform: scale(1.1);
+        }
+        .response-buttons {
+            margin: 20px;
+        }
+        .response-buttons button {
+            font-size: 1.2em;
+            padding: 10px 20px;
+            color: #ffffff;
+            background-color: #4CAF50; /* Verde para o botão SIM */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .response-buttons button:hover {
+            background-color: #45a049; /* Tom mais claro ao passar o mouse */
+            transform: scale(1.1);
+        }
+        .no-button {
+            background-color: #f44336; /* Vermelho para o botão NÃO */
+        }
+        .no-button:hover {
+            background-color: #e53935; /* Tom mais claro ao passar o mouse */
+        }
+    </style>
+    <script>
+        function showButtonContainer(response) {
+            if (response === 'yes') {
+                document.querySelector('.button-container').style.display = 'block';
+            } else {
+                alert("Esperamos que você mude de ideia e se junte a nós na aventura intergaláctica!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>As Camisetas de Jornal e PP estão chegando... e são de outro planeta.</h1>
+    <p>Pronto para entrar nessa aventura intergaláctica?</p>
+    <div class="response-buttons">
+        <button onclick="showButtonContainer('yes')">SIM</button>
+        <button class="no-button" onclick="showButtonContainer('no')">NÃO</button>
+    </div>
+    <div class="button-container">
+        <p>Clique no botão abaixo e descubra as personalidades que estarão nas camisetas.</p>
+        <a class="mystery-button" href="https://youtu.be/VPH2mvPxVQU" target="_blank">Descubra o Mistério</a>
+    </div>
+</body>
+</html>
